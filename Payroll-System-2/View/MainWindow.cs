@@ -11,10 +11,11 @@ using System.Windows.Forms;
 
 namespace Payroll_System_2
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
         ViewModel viewModel = new ViewModel();
-        public Form1()
+        public static Company Company = new Company();
+        public MainWindow()
         {
             InitializeComponent();
             
@@ -22,14 +23,20 @@ namespace Payroll_System_2
 
         private void AddPerHour_Click(object sender, EventArgs e)
         {
-            AddPerHourWindow form = new AddPerHourWindow();
-            form.ShowDialog();
+            AddPerHourWindow addPerHourWindow = new AddPerHourWindow();
+            addPerHourWindow.ShowDialog();
         }
 
         private void AddPercent_Click(object sender, EventArgs e)
         {
-            AddPercentWindow form = new AddPercentWindow();
-            form.ShowDialog();
+            AddPercentWindow addPercentWindow = new AddPercentWindow();
+            addPercentWindow.ShowDialog();
         }
+        private void Simulation_Click(object sender, EventArgs e)
+        {
+            SimulationWindow simulationWindow = new SimulationWindow();
+            simulationWindow.ShowDialog();
+        }
+
     }
 }
