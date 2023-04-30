@@ -46,7 +46,7 @@ namespace Payroll_System_2
             }
 
 
-            if (sex == null || !(sex == "М" || sex == "Ж" || sex == "Мужчина" || sex == "Женщина"))
+            if (sex == null || !(sex == "М" || sex == "Ж" || sex == "Мужской" || sex == "Женский" || sex == "Мужчина" || sex == "Женщина"))
             {
                 MessageBox.Show("Выберите пол между двух предложенных", "Ошибка добавления", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;

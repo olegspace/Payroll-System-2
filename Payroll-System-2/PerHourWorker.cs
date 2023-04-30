@@ -47,9 +47,9 @@
             this.norm_hours = norm_hours;
             this.extra_pay = extra_pay;
         }
-        public override void Worker_type()
+        public override string Worker_type()
         {
-            //Console.WriteLine("Работник с почасовой оплатой");
+            return "Работник с почасовой оплатой";
         }
         public void Work(int worked) { Hours += worked; }
 

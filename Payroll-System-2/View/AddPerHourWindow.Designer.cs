@@ -55,7 +55,9 @@
             // 
             // cbSex
             // 
+            this.cbSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSex.FormattingEnabled = true;
+            this.cbSex.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cbSex.Items.AddRange(new object[] {
             "Мужчина",
             "Женщина"});
@@ -126,6 +128,7 @@
             this.nudPayPerHour.Size = new System.Drawing.Size(150, 27);
             this.nudPayPerHour.TabIndex = 10;
             this.nudPayPerHour.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPayPerHour.ThousandsSeparator = true;
             // 
             // nudNormHours
             // 
@@ -162,6 +165,7 @@
             this.nudExtraPay.Size = new System.Drawing.Size(150, 27);
             this.nudExtraPay.TabIndex = 12;
             this.nudExtraPay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudExtraPay.ThousandsSeparator = true;
             // 
             // AddHourWorker
             // 

@@ -29,140 +29,142 @@
         private void InitializeComponent()
         {
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btAddPercentWorker = new System.Windows.Forms.Button();
+            this.nudPerc = new System.Windows.Forms.NumericUpDown();
+            this.nudFixPay = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.cbSex = new System.Windows.Forms.ComboBox();
+            this.tbWorkerName = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPerc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFixPay)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(85, 22);
+            this.label6.Location = new System.Drawing.Point(97, 29);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(504, 21);
+            this.label6.Size = new System.Drawing.Size(631, 28);
             this.label6.TabIndex = 26;
             this.label6.Text = "Добавление сотрудника с фиксированной оплатой и процентом\r\n";
             // 
-            // button1
+            // btAddPercentWorker
             // 
-            this.button1.Location = new System.Drawing.Point(36, 263);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(629, 72);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btAddPercentWorker.Location = new System.Drawing.Point(41, 351);
+            this.btAddPercentWorker.Name = "btAddPercentWorker";
+            this.btAddPercentWorker.Size = new System.Drawing.Size(719, 96);
+            this.btAddPercentWorker.TabIndex = 25;
+            this.btAddPercentWorker.Text = "Добавить";
+            this.btAddPercentWorker.UseVisualStyleBackColor = true;
+            this.btAddPercentWorker.Click += new System.EventHandler(this.btAddPercentWorker_Click);
             // 
-            // numericUpDown2
+            // nudPerc
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(349, 194);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(131, 23);
-            this.numericUpDown2.TabIndex = 23;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPerc.Location = new System.Drawing.Point(399, 259);
+            this.nudPerc.Name = "nudPerc";
+            this.nudPerc.Size = new System.Drawing.Size(150, 27);
+            this.nudPerc.TabIndex = 23;
+            this.nudPerc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // numericUpDown1
+            // nudFixPay
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(350, 157);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            100000,
+            this.nudFixPay.Increment = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(131, 23);
-            this.numericUpDown1.TabIndex = 22;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudFixPay.Location = new System.Drawing.Point(400, 209);
+            this.nudFixPay.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nudFixPay.Name = "nudFixPay";
+            this.nudFixPay.Size = new System.Drawing.Size(150, 27);
+            this.nudFixPay.TabIndex = 22;
+            this.nudFixPay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudFixPay.ThousandsSeparator = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(200, 196);
+            this.label4.Location = new System.Drawing.Point(229, 261);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 15);
+            this.label4.Size = new System.Drawing.Size(147, 20);
             this.label4.TabIndex = 20;
             this.label4.Text = "Процент от продаж";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(178, 157);
+            this.label3.Location = new System.Drawing.Point(203, 209);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 15);
+            this.label3.Size = new System.Drawing.Size(172, 20);
             this.label3.TabIndex = 19;
             this.label3.Text = "Фиксированная оплата";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(224, 115);
+            this.label2.Location = new System.Drawing.Point(256, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 15);
+            this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 18;
             this.label2.Text = "Пол сотрудника";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(222, 76);
+            this.label1.Location = new System.Drawing.Point(254, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 15);
+            this.label1.Size = new System.Drawing.Size(122, 20);
             this.label1.TabIndex = 17;
             this.label1.Text = "Имя сотрудника";
             // 
-            // comboBox1
+            // cbSex
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSex.FormattingEnabled = true;
+            this.cbSex.Items.AddRange(new object[] {
             "Мужчина",
             "Женщина"});
-            this.comboBox1.Location = new System.Drawing.Point(349, 112);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(133, 23);
-            this.comboBox1.TabIndex = 16;
+            this.cbSex.Location = new System.Drawing.Point(399, 149);
+            this.cbSex.Name = "cbSex";
+            this.cbSex.Size = new System.Drawing.Size(151, 28);
+            this.cbSex.TabIndex = 16;
             // 
-            // textBox1
+            // tbWorkerName
             // 
-            this.textBox1.Location = new System.Drawing.Point(349, 74);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 23);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbWorkerName.Location = new System.Drawing.Point(399, 99);
+            this.tbWorkerName.Name = "tbWorkerName";
+            this.tbWorkerName.Size = new System.Drawing.Size(151, 27);
+            this.tbWorkerName.TabIndex = 15;
+            this.tbWorkerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AddPercentWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
+            this.ClientSize = new System.Drawing.Size(800, 451);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.btAddPercentWorker);
+            this.Controls.Add(this.nudPerc);
+            this.Controls.Add(this.nudFixPay);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.cbSex);
+            this.Controls.Add(this.tbWorkerName);
             this.Name = "AddPercentWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddPercentWindow";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPerc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFixPay)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,14 +173,14 @@
         #endregion
 
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btAddPercentWorker;
+        private System.Windows.Forms.NumericUpDown nudPerc;
+        private System.Windows.Forms.NumericUpDown nudFixPay;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbSex;
+        private System.Windows.Forms.TextBox tbWorkerName;
     }
 }

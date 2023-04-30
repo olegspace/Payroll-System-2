@@ -36,9 +36,9 @@
             this.perc = perc;
             sold = 0;
         }
-        public override void Worker_type()
+        public override string Worker_type()
         {
-            //Console.WriteLine("Работник с фиксированной оплатой");
+            return "Работник с фиксированной оплатой";
         }
         public void Sell(int money) { Sold += money; }
         public int Count()

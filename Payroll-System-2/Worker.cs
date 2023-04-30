@@ -32,7 +32,7 @@ namespace Payroll_system
             }
         }
 
-        public virtual void Worker_type()  { }
+        public virtual string Worker_type()  { return ""; }
         public Worker() 
         {
             name = "Не задано";

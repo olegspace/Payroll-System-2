@@ -36,13 +36,9 @@
             this.labelAdd = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.btShowWorkers = new System.Windows.Forms.Button();
+            this.tbWorkerForDelete = new System.Windows.Forms.TextBox();
+            this.tbAllWorkers = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -98,6 +94,7 @@
             this.DeleteWorker.TabIndex = 4;
             this.DeleteWorker.Text = "Удалить работника по имени";
             this.DeleteWorker.UseVisualStyleBackColor = true;
+            this.DeleteWorker.Click += new System.EventHandler(this.DeleteWorker_Click);
             // 
             // labelAdd
             // 
@@ -129,64 +126,41 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "С фиксированной + процент";
             // 
-            // listBox1
+            // btShowWorkers
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(678, 396);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(121, 84);
-            this.listBox1.TabIndex = 8;
+            this.btShowWorkers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btShowWorkers.Location = new System.Drawing.Point(29, 52);
+            this.btShowWorkers.Name = "btShowWorkers";
+            this.btShowWorkers.Size = new System.Drawing.Size(187, 67);
+            this.btShowWorkers.TabIndex = 9;
+            this.btShowWorkers.Text = "Вывести список сотрудников";
+            this.btShowWorkers.UseVisualStyleBackColor = true;
+            this.btShowWorkers.Click += new System.EventHandler(this.btShowWorkers_Click);
             // 
-            // button2
+            // tbWorkerForDelete
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(29, 52);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 67);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Вывести список сотрудников";
-            this.button2.UseVisualStyleBackColor = true;
+            this.tbWorkerForDelete.Location = new System.Drawing.Point(862, 347);
+            this.tbWorkerForDelete.Name = "tbWorkerForDelete";
+            this.tbWorkerForDelete.Size = new System.Drawing.Size(187, 27);
+            this.tbWorkerForDelete.TabIndex = 10;
             // 
-            // textBox1
+            // tbAllWorkers
             // 
-            this.textBox1.Location = new System.Drawing.Point(862, 347);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 27);
-            this.textBox1.TabIndex = 10;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 125);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(642, 200);
-            this.dataGridView1.TabIndex = 11;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(29, 347);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(642, 200);
-            this.dataGridView2.TabIndex = 12;
+            this.tbAllWorkers.Location = new System.Drawing.Point(29, 146);
+            this.tbAllWorkers.Multiline = true;
+            this.tbAllWorkers.Name = "tbAllWorkers";
+            this.tbAllWorkers.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.tbAllWorkers.Size = new System.Drawing.Size(589, 437);
+            this.tbAllWorkers.TabIndex = 12;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 616);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.tbAllWorkers);
+            this.Controls.Add(this.tbWorkerForDelete);
+            this.Controls.Add(this.btShowWorkers);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelAdd);
@@ -198,8 +172,6 @@
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Никита Копп";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,10 +187,8 @@
         private System.Windows.Forms.Label labelAdd;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btShowWorkers;
+        private System.Windows.Forms.TextBox tbWorkerForDelete;
+        private System.Windows.Forms.TextBox tbAllWorkers;
     }
 }
