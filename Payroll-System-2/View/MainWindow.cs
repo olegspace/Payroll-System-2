@@ -1,4 +1,4 @@
-﻿using Payroll_system;
+﻿using Payroll_System_2;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,8 +32,15 @@ namespace Payroll_System_2
         }
         private void Simulation_Click(object sender, EventArgs e)
         {
-            SimulationWindow simulationWindow = new SimulationWindow();
-            simulationWindow.ShowDialog();
+            if (Company.percent_workers.Count != 0 || Company.per_hour_workers.Count != 0)
+            {
+                SimulationWindow simulationWindow = new SimulationWindow();
+                simulationWindow.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("В компании пока нет работников", "Попытка симуляции", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btShowWorkers_Click(object sender, EventArgs e)
@@ -88,6 +95,11 @@ namespace Payroll_System_2
             {
                 MessageBox.Show("Вы ввели пустую строку", "Удаление работника", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void MainWindow_Activated(object sender, EventArgs e)
+        {
+            lbNumDays.Text = Company.Days.ToString();
         }
     }
 }

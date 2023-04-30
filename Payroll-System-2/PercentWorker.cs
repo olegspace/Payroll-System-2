@@ -1,4 +1,4 @@
-﻿namespace Payroll_system
+﻿namespace Payroll_System_2
 {
     public class PercentWorker : Worker
     {        

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Xml.Linq;
 
-namespace Payroll_system
+namespace Payroll_System_2
 {
     public class Company
     {
@@ -188,7 +188,7 @@ namespace Payroll_system
             Console.Write("Нажмите любую клавишу для продолжения...");
             Console.ReadKey(); //Пауза
         }
-        private int Get_day_type()
+        public int Get_day_type()
         {
             Random rnd = new Random();
             int day_type, start;
@@ -225,7 +225,7 @@ namespace Payroll_system
             Console.WriteLine("  ----------------  ");
         }
 
-        private void PayDay()
+        public void PayDay()
         {
             Pay_day_print();
             for (int j = 0; j < per_hour_workers.Count; j++)

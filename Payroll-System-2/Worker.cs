@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace Payroll_system
+namespace Payroll_System_2
 {
     public class Worker
     {
